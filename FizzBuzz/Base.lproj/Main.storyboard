@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -13,14 +15,71 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="MainView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxo-r0-6Wz">
+                                <rect key="frame" x="465" y="554" width="115" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="PLAY AGAIN">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fp6-XS-v9N" userLabel="GameView">
+                                <rect key="frame" x="60" y="60" width="480" height="480"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Fp6-XS-v9N" secondAttribute="height" multiplier="1:1" id="4oM-9G-lOY"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="characterWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sml-OA-eBY">
+                                <rect key="frame" x="190" y="0.0" width="221" height="67"/>
+                                <string key="text">FIZZ = NUMBER/3
+BUZZ = NUMBER/5
+FIZZBUZZ = FIZZ AND BUZZ</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.27317144310000002" green="0.48057507570000002" blue="0.91489109850000006" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Sml-OA-eBY" firstAttribute="baseline" secondItem="Fp6-XS-v9N" secondAttribute="baseline" id="5tS-dH-QWs"/>
+                            <constraint firstItem="Fp6-XS-v9N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7zi-GV-YaV"/>
+                            <constraint firstItem="Fp6-XS-v9N" firstAttribute="leading" secondItem="Sml-OA-eBY" secondAttribute="trailing" constant="-221" id="D82-pO-JVE"/>
+                            <constraint firstItem="Sml-OA-eBY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dsf-Ok-S94"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uxo-r0-6Wz" secondAttribute="bottom" constant="10" id="EHx-Ym-C4h"/>
+                            <constraint firstAttribute="trailing" secondItem="Uxo-r0-6Wz" secondAttribute="trailing" constant="10" id="FPX-LK-IZ8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Uxo-r0-6Wz" secondAttribute="bottom" constant="10" id="G9H-6F-jTp"/>
+                            <constraint firstItem="Fp6-XS-v9N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HVV-Qu-FjM"/>
+                            <constraint firstItem="Fp6-XS-v9N" firstAttribute="top" secondItem="Sml-OA-eBY" secondAttribute="bottom" constant="20" id="LDj-f8-Hu8"/>
+                            <constraint firstItem="Sml-OA-eBY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="60" id="S0L-h9-Xhj"/>
+                            <constraint firstItem="Sml-OA-eBY" firstAttribute="width" secondItem="Fp6-XS-v9N" secondAttribute="width" id="Y75-HA-eLx"/>
+                            <constraint firstItem="Fp6-XS-v9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="hhG-5e-1tC"/>
+                            <constraint firstItem="Sml-OA-eBY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="iZO-Ir-kh7"/>
+                            <constraint firstItem="Fp6-XS-v9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="40" id="jJJ-8Y-n2V"/>
+                            <constraint firstItem="Sml-OA-eBY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="pdQ-xq-YSK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uxo-r0-6Wz" secondAttribute="trailing" id="tSf-uS-wRf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="D82-pO-JVE"/>
+                                <exclude reference="jJJ-8Y-n2V"/>
+                                <exclude reference="5tS-dH-QWs"/>
+                                <exclude reference="S0L-h9-Xhj"/>
+                                <exclude reference="Y75-HA-eLx"/>
+                                <exclude reference="iZO-Ir-kh7"/>
+                                <exclude reference="pdQ-xq-YSK"/>
+                                <exclude reference="FPX-LK-IZ8"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="346" y="372"/>
         </scene>
     </scenes>
 </document>
