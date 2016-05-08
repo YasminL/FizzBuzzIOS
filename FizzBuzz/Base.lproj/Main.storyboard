@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -99,7 +99,7 @@
                                 <rect key="frame" x="190" y="0.0" width="221" height="67"/>
                                 <string key="text">FIZZ = NUMBER/3
 BUZZ = NUMBER/5
-FIZZBUZZ = FIZZ AND BUZZ</string>
+FIZZBUZZ = FIZZ &amp; BUZZ</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
