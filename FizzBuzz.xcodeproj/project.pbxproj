@@ -90,6 +90,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC10DFB61CDFADF0002B9E34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC11D9C21CD691F900BFC72F /* Brain.swift */,
+				CC11D9C51CD6A5A700BFC72F /* FizzBuzz.swift */,
+				CC8DB1811CDF936200B7E222 /* Game.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CC10DFB81CDFAE1E002B9E34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC11D99B1CD6909300BFC72F /* Assets.xcassets */,
+				CC11D9981CD6909300BFC72F /* Main.storyboard */,
+				CC11D99D1CD6909300BFC72F /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CC10DFB91CDFAE62002B9E34 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC11D9961CD6909300BFC72F /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		CC11D9881CD6909300BFC72F = {
 			isa = PBXGroup;
 			children = (
@@ -114,14 +142,10 @@
 			isa = PBXGroup;
 			children = (
 				CC11D9941CD6909300BFC72F /* AppDelegate.swift */,
-				CC11D9961CD6909300BFC72F /* ViewController.swift */,
-				CC11D9981CD6909300BFC72F /* Main.storyboard */,
-				CC11D99B1CD6909300BFC72F /* Assets.xcassets */,
-				CC11D99D1CD6909300BFC72F /* LaunchScreen.storyboard */,
 				CC11D9A01CD6909300BFC72F /* Info.plist */,
-				CC11D9C21CD691F900BFC72F /* Brain.swift */,
-				CC11D9C51CD6A5A700BFC72F /* FizzBuzz.swift */,
-				CC8DB1811CDF936200B7E222 /* Game.swift */,
+				CC10DFB61CDFADF0002B9E34 /* Model */,
+				CC10DFB81CDFAE1E002B9E34 /* View */,
+				CC10DFB91CDFAE62002B9E34 /* ViewControllers */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
