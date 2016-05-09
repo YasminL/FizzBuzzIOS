@@ -18,43 +18,87 @@ class GameTests: XCTestCase {
     
     func test_Move_Is_Fizz_And_Player_Is_Correct() {
         game.score = 2
-        let result = game.play("Fizz")
+        let response = game.play("Fizz")
+        let result = response.right
         XCTAssertEqual(result, true)
     }
     
     func test_Move_Is_Fizz_And_Player_Is_Incorrect() {
         game.score = 1
-        let result = game.play("Fizz")
+        let response = game.play("Fizz")
+        let result = response.right
         XCTAssertEqual(result, false)
     }
     
     func test_Move_Is_Buzz_And_Player_Is_Correct() {
         game.score = 4
-        let result = game.play("Buzz")
+        let response = game.play("Buzz")
+        let result = response.right
         XCTAssertEqual(result, true)
     }
     
     func test_Move_Is_Buzz_And_Player_Is_Incorrect() {
         game.score = 1
-        let result = game.play("Buzz")
+        let response = game.play("Buzz")
+        let result = response.right
         XCTAssertEqual(result, false)
     }
     
     func test_Move_Is_FizzBuzz_And_Player_Is_Correct() {
         game.score = 14
-        let result = game.play("FizzBuzz")
+        let response = game.play("FizzBuzz")
+        let result = response.right
         XCTAssertEqual(result, true)
     }
     
     func test_Move_Is_FizzBuzz_And_Player_Is_Incorrect() {
         game.score = 1
-        let result = game.play("FizzBuzz")
+        let response = game.play("FizzBuzz")
+        let result = response.right
         XCTAssertEqual(result, false)
     }
     
     func test_Move_Is_Incorrect_And_No_Score_Is_Added() {
         game.score = 1
         game.play("Fizz")
-        XCTAssertEqual(game.score, 2)
+        XCTAssertEqual(game.score, 1)
+    }
+    
+    func test_Play_Should_Return_If_Move_Is_Right() {
+        let response = game.play("1")
+        XCTAssertNotNil(response.right)
+    }
+    
+    func test_Play_Should_Return_New_Score() {
+        let response = game.play("1")
+        XCTAssertNotNil(response.score)
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

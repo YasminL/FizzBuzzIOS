@@ -12,7 +12,7 @@ class FizzBuzz: NSObject {
     
     let brain = Brain()
 
-    func checkFizzBuzz(number: Int) -> String? {
+    func checkFizzBuzz(number: Int) -> String {
         
         if brain.isDivisibleByFifteen(number) {
             return "FizzBuzz"

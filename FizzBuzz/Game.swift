@@ -18,17 +18,17 @@ class Game : NSObject {
         super.init()
     }
     
-    func play(move: String) -> Bool {
+    func play(move: String) -> (right: Bool, score: Int) {
         score++
         let result = fizzBuzz.checkFizzBuzz(score)
         
         if (result == move) {
-            return true
+            return (true, score)
         }
             
         else {
             score--
-            return false
+            return (false, score)
         }
     }
 }

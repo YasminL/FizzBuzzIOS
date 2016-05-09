@@ -30,8 +30,27 @@ class ViewControllerUnitTests: XCTestCase {
         super.tearDown()
     }
     
-    func test() {
-        XCTAssertTrue(true)
+    func test_Move_One_Increments_Score() {
+        viewController.play("1")
+        let score = viewController.gameScore
+        XCTAssertEqual(score, 1)
+    }
+    
+    func test_Move_Two_Increments_Score() {
+        viewController.play("1")
+        viewController.play("2")
+        let score = viewController.gameScore
+        XCTAssertEqual(score, 2)
+    }
+    
+    func test_Moce_One_Does_Not_Increment_Score() {
+        viewController.play("Fizz")
+        let score = viewController.gameScore
+        XCTAssertEqual(score, 0)
+    }
+    
+    func test_Has_A_Game() {
+        XCTAssertNotNil(viewController.game)
     }
 
 }
